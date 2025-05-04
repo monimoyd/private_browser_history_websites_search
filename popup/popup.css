@@ -1,1 +1,28 @@
+.container {
+  width: 400px;
+  padding: 16px;
+}
 
+.search-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 8px;
+}
+
+.result-item {
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.view-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
