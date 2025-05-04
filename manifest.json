@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "My Web History Search",
+  "version": "1.0",
+  "description": "Semantic search through browsing history with content highlighting",
+  "permissions": [
+    "history",
+    "tabs",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": [
+        "*://mail.google.com/*",
+        "*://web.whatsapp.com/*",
+        "*://*.facebook.com/*",
+        "*://*.twitter.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
